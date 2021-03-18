@@ -1,0 +1,42 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Changed hard drive on workstation 005",
+      "attention": false,
+      "date": "03-02-2019",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Workstation 07 fixed",
+      "attention": true,
+      "date": "03-02-2019",
+      "tech": "Damian"
+    },
+    {
+      "id": 3,
+      "message": "Server Down",
+      "attention": false,
+      "date": "03-02-2019",
+      "tech": "Tonny"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Smith"
+    },
+    {
+      "id": 2,
+      "firstName": "Robert",
+      "lastName": "Rox"
+    },
+    {
+      "id": 3,
+      "firstName": "Mary",
+      "lastName": "Foster"
+    }
+  ]
+}
