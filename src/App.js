@@ -1,18 +1,24 @@
 import React, { useEffect } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
+import "./App.css";
 
-import SearchBar from "./components/layout/SearchBar";
+//! List
 import Logs from "./components/logs/Logs";
-import AddLogModal from "./components/logs/AddLogModal";
-import EditLogModal from "./components/logs/EditLogModal";
-import AddBtn from "./components/layout/addBtn";
-
-//! Techs
-import AddTechModal from "./components/techs/AddTechModal";
 import TechListModal from "./components/techs/TechListModal";
 
-import "./App.css";
+//! Layouts
+import SearchBar from "./components/layout/SearchBar";
+import AddBtn from "./components/layout/addBtn";
+
+//! Modals
+import AddLogModal from "./components/logs/AddLogModal";
+import EditLogModal from "./components/logs/EditLogModal";
+import AddTechModal from "./components/techs/AddTechModal";
+
+//! redux
+import { Provider } from "react-redux";
+import store from "./store";
 
 const App = () => {
   useEffect(() => {
@@ -20,17 +26,26 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <SearchBar />
-      <div className="container">
-        <AddBtn />
-        <AddLogModal />
-        <EditLogModal />
-        <AddTechModal />
-        <TechListModal />
-        <Logs />
+    <Provider store={store}>
+      <div className="App">
+        <SearchBar />
+        <div className="container">
+          {/* Btn */}
+          <AddBtn />
+
+          {/* Modals */}
+          <AddLogModal />
+          <EditLogModal />
+          <AddTechModal />
+
+          {/* Technician List */}
+          <TechListModal />
+
+          {/* Logs List */}
+          <Logs />
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 };
 
