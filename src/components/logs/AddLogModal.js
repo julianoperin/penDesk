@@ -1,11 +1,22 @@
 import React, { useState } from "react";
+import M from "materialize-css/dist/js/materialize.min.js";
 
 const AddLogModal = () => {
   const [message, setMessage] = useState("");
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    if (message === "" || tech === "") {
+      M.toast({ html: "Please enter a message and tech" });
+    } else {
+      console.log(message, tech, attention);
+      //clear fields
+      setMessage("");
+      setTech("");
+      setAttention(false);
+    }
+  };
 
   return (
     <div id="add-log-modal" className="modal" style={modalStyle}>
