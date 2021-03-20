@@ -1,25 +1,11 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Changed hard drive on workstation 005",
-      "attention": false,
-      "date": "03-02-2019",
-      "tech": "Sam Smith"
-    },
-    {
-      "id": 2,
-      "message": "Workstation 07 fixed",
+      "message": "Changed the speakers",
       "attention": true,
-      "date": "03-02-2019",
-      "tech": "Damian"
-    },
-    {
-      "id": 3,
-      "message": "Server Down",
-      "attention": false,
-      "date": "03-02-2019",
-      "tech": "Tonny"
+      "tech": "John Doe",
+      "date": "2021-03-20T15:48:29.452Z",
+      "id": 1
     }
   ],
   "techs": [
