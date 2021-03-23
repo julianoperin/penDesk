@@ -1,11 +1,11 @@
 {
   "logs": [
     {
-      "message": "Changed the speakers",
+      "message": "aaaaa",
       "attention": true,
-      "tech": "John Doe",
-      "date": "2021-03-20T15:48:29.452Z",
-      "id": 1
+      "tech": "Marco ",
+      "date": "2021-03-22T19:00:43.639Z",
+      "id": 2
     }
   ],
   "techs": [

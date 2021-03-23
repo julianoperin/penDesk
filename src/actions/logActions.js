@@ -1,5 +1,13 @@
-import { GET_LOGS, SET_LOADING, LOGS_ERROR, ADD_LOG } from "./types";
+import {
+  GET_LOGS,
+  SET_LOADING,
+  LOGS_ERROR,
+  ADD_LOG,
+  DELETE_LOG,
+  UPDATE_LOG,
+} from "./types";
 
+//! Get Logs
 export const getLogs = () => async (dispatch) => {
   try {
     setLoading();
@@ -44,6 +52,63 @@ export const addLog = (log) => async (dispatch) => {
     });
   }
 };
+
+//! Delete Logs
+export const deleteLog = (id) => async (dispatch) => {
+  try {
+    setLoading();
+
+    await fetch(`/logs/${id}`, {
+      method: "DELETE",
+    });
+
+    dispatch({
+      type: DELETE_LOG,
+      payload: id,
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: err.response.data,
+    });
+  }
+};
+
+//! Set loading true
+export const setCurrent = () => {
+  return {
+    type: SET_LOADING
+  }
+}
+
+//! Set loading true
+export const setCurrent = () => {
+  return {
+    type: SET_LOADING
+  }
+}
+
+
+// //! UpDate Logs
+// export const updateLog = (id) => async (dispatch) => {
+//   try {
+//     setLoading();
+
+//     await fetch(`/logs/${id}`, {
+//       method: "PUT",
+//     });
+
+//     dispatch({
+//       type: UPDATE_LOG,
+//       payload: id,
+//     });
+//   } catch (err) {
+//     dispatch({
+//       type: LOGS_ERROR,
+//       payload: err.response.data,
+//     });
+//   }
+// };
 
 //! Set Loading
 export const setLoading = () => {
